@@ -1,0 +1,221 @@
+/* Variables */
+/* Mixins */
+.animate {
+  -moz-transition: all 0.1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+/* Template */
+#master-container {
+  width: 1050px;
+  margin: 0 auto;
+  border: 1px solid #cdcdcd;
+}
+#form-container {
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  clear: left;
+}
+#tabs-container {
+  float: left;
+  width: 100%;
+  position: relative;
+  border: 1px solid #cdcdcd;
+  border-width: 0 1px 0 0;
+  right: 60%;
+}
+.left-col {
+  float: left;
+  width: 40%;
+  position: relative;
+  left: 60%;
+  overflow: hidden;
+}
+.right-col {
+  float: left;
+  width: 60%;
+  position: relative;
+  left: 60%;
+  overflow: hidden;
+}
+/* Tabs */
+.nav-tabs {
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid #cdcdcd;
+  border-width: 0 0 1px 0;
+  margin-top: 46px;
+  position: relative;
+}
+.nav-tabs li:first-child {
+  margin-left: 10px;
+}
+.nav-tabs li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+.nav-tabs li a {
+  text-decoration: none;
+}
+.nav-tabs li.active {
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-bottom-color: #f1f1f1;
+  padding-bottom: 12px;
+  top: 1px;
+}
+.required-star {
+  color: red;
+}
+/* Form Container */
+#form-container hr {
+  border: 1px solid #cdcdcd;
+  border-width: 1px 0 0 0;
+}
+#form-container h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+/* Form Fields */
+.right-col {
+  margin-bottom: 20px;
+}
+.right-col .loading {
+  width: 100%;
+  text-align: center;
+  margin-top: 17%;
+}
+.right-col #form-elements,
+.right-col #sortable-elements {
+  padding: 0px;
+  margin: 0px;
+}
+.right-col #form-elements li {
+  list-style-type: none;
+}
+.right-col .form-element {
+  position: relative;
+  list-style-type: none;
+  cursor: pointer;
+  padding: 25px;
+}
+.right-col .form-element input,
+.right-col .form-element texarea,
+.right-col .form-element label {
+  cursor: pointer;
+}
+.right-col .form-element h2,
+.right-col .form-element h5 {
+  margin: 0px;
+  padding: 0px;
+}
+.right-col .form-element h2 {
+  margin-bottom: 5px;
+}
+.right-col #form-settings-element {
+  margin-bottom: 10px;
+}
+.right-col #form-settings-element:hover {
+  border: none;
+}
+.right-col #form-settings-element.selected {
+  background-color: #c3dbf8;
+}
+.right-col #sortable-elements {
+  padding: 0px;
+  margin: 0px;
+  margin-top: 25px;
+}
+.right-col #sortable-elements .form-element {
+  width: 85%;
+  margin: 10px 0 10px 25px;
+  list-style-type: none;
+  cursor: pointer;
+  padding: 15px;
+  border: 1px solid #cdcdcd;
+}
+.right-col #sortable-elements .form-element label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.right-col #sortable-elements .form-element.selected {
+  background-color: #DCF7C0;
+  border: 1px solid #7ED321;
+}
+.right-col #sortable-elements .form-element:hover {
+  border: 1px dashed #7ED321;
+}
+.right-col #sortable-elements .section-break {
+  margin: 25px !important;
+  padding: 0px !important;
+  border: none !important;
+  width: 100%;
+  left: 0px;
+}
+.right-col #sortable-elements .section-break label {
+  font-size: 20px !important;
+  padding: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0px !important;
+}
+.right-col #sortable-elements .section-break p {
+  margin-top: 0px;
+  padding: 10px;
+  padding-top: 0px;
+}
+.right-col .button {
+  margin: 20px 0 30px 25px;
+}
+/* Tabs toolbox */
+.left-col .form-group label {
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  display: block;
+}
+.left-col .col-sm-6 {
+  width: 47%;
+  float: left;
+  margin-left: 7px;
+}
+.left-col .section {
+  padding: 20px;
+  border: 1px solid #cdcdcd;
+  margin: 0 0 15px 0;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+.left-col .new-element {
+  margin-bottom: 3px;
+}
+.left-col .choice {
+  margin-bottom: 5px;
+}
+.left-col textarea {
+  width: 100%;
+}
+.left-col input[type='text'] {
+  width: 100%;
+}
+/* Footer */
+#footer {
+  width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 12px;
+}
+#footer p {
+  margin-top: 30px;
+  font-size: 14px;
+}
