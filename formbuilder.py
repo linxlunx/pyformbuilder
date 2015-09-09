@@ -10,6 +10,9 @@ class formLoader:
 		self.action = form_action
 
 	def render_form(self):
+		"""
+		Render Form
+		"""
 		if (not self.form_data or not self.action):
 			return False
 
@@ -43,6 +46,9 @@ class formLoader:
 		return form
 
 	def open_form(self, fields):
+		"""
+		Render the form header
+		"""
 		html = '''<form action="{0}" method="post" accept-charset="utf-8" role="form" novalidate="novalidate" >'''.format(self.action);
 		html += '''<div class="form-title">'''
 		html += '''<h2>{0}</h2><h3>{1}</h3>'''.format(self.form_data['title'], self.form_data['description'])
@@ -53,6 +59,9 @@ class formLoader:
 		return html
 
 	def encode_element_title(self, title):
+		"""
+		Encode Element Title
+		"""
 		clean_string = re.compile(r"[^a-zA-Z0-9.-_]")
 
 		string = title.lower().replace(' ', '_')
@@ -61,6 +70,9 @@ class formLoader:
 		return string
 
 	def make_label(self, id, title, required):
+		"""
+		Get formatted label for form element
+		"""
 		if required:
 			html = '''<label for="{0}">{1} <span style="color: red">*</span></label>'''.format(id, title)
 		else:
@@ -69,6 +81,9 @@ class formLoader:
 		return html
 
 	def element_single_line_text(self, field):
+		"""
+		Render single line text
+		"""
 		id = self.encode_element_title(field['title'])
 		required = 'required' if field['required'] else False
 
@@ -80,6 +95,9 @@ class formLoader:
 		return html
 
 	def element_number(self, field):
+		"""
+		Render number
+		"""
 		id = self.encode_element_title(field['title'])
 		required = 'required' if field['required'] else False
 
@@ -91,6 +109,9 @@ class formLoader:
 		return html
 
 	def element_paragraph_text(self, field):
+		"""
+		Render paragraph text
+		"""
 		id = self.encode_element_title(field['title'])
 		required = 'required' if field['required'] else False
 
@@ -102,6 +123,9 @@ class formLoader:
 		return html
 
 	def element_checkboxes(self, field):
+		"""
+		Render checkboxes
+		"""
 		id = self.encode_element_title(field['title'])
 		required = 'required' if field['required'] else False
 
@@ -120,6 +144,9 @@ class formLoader:
 		return html
 
 	def element_multiple_choice(self, field):
+		"""
+		Render multiple choice
+		"""
 		id = self.encode_element_title(field['title'])
 		required = 'required' if field['required'] else False
 
@@ -138,6 +165,9 @@ class formLoader:
 		return html
 
 	def element_dropdown(self, field):
+		"""
+		Render dropdown
+		"""
 		id = self.encode_element_title(field['title'])
 		required = 'required' if field['required'] else False
 
